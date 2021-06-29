@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* display: none ; */
+            position: relative
+        }
+    </style>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <div id="box">
+        我是一个盒子
+    </div>
+    <button class="button1">点击</button>
+    <button class="button2">停止</button>
+
+    <div>
+        <div>
+            <p>
+            <h1>
+                <span></span>
+            </h1>
+            <h2>
+
+            </h2>
+            <h3>
+
+            </h3>
+            </p>
+        </div>
+    </div>
+    <script>
+        // var jE = document.getElementsByTagName('div');
+        // var jE = document.getElementById('box')
+        // var jQE = $('#box')
+        // console.log(jE)
+        // console.log(jQE)
+        // console.log(jQE[0])
+        // console.log($(jE))
+
+        // $('.button1').click(function () {
+        //     // console.log(this)
+        //     // $(this).hide(3)
+        //     // $('#box').hide(1000,function(){
+        //     //     console.log('完全隐藏了')
+        //     // })
+        //     // $('#box').show(3)
+
+        //     // $("#box").toggle();
+        //     // $("#box").fadeOut(3000);
+        //     // $("#box").fadeIn(3000);
+
+        //     // $("#box").fadeTo(3000, 0.3);
+        //     // $("#box").fadeTo(3000, 0.5);
+        //     // $("#box").slideToggle(3000);
+        //     // var list = {
+        //     //     left:'250px',
+        //     //     opacity:'0.5',
+        //     //     height:'150px',
+        //     //     width:'150px',
+
+        //     // }
+        //     // $("#box").animate({
+        //     //     left:'250px',
+        //     //     height:'+=150px',
+        //     //     width:'+=150px'
+        //     // });
+        //     var div=$("div");
+        //     div.animate({height:'300px',opacity:'0.4'},"slow");
+        //     div.animate({width:'300px',opacity:'0.8'},"slow");
+        //     div.animate({height:'100px',opacity:'0.4'},"slow");
+        //     div.animate({width:'100px',opacity:'0.8'},3000);
+        // })
+
+
+        // $(".button2").click(function(){
+        //     $('div').stop();
+        // })
+
+        $('button').click(function () {
+            // $("div").append("我是使用append插入的内容");
+            // $("div").prepend("我是使用append插入的内容");
+            // $("div").after("我是使用append插入的内容");
+            // $("div").before("我是使用append插入的内容").after("我是使用append插入的内容");
+
+            // $('div').load('https://www.fastmock.site/mock/323354e56ef21147c3f550e18435baa1/api/get/myCourse');
+
+            // $.get('https://www.fastmock.site/mock/323354e56ef21147c3f550e18435baa1/api/get/myCourse',function(data,status){
+            //     console.log(data);
+            //     console.log(status);
+            // });
+
+            $.post("https://www.fastmock.site/mock/323354e56ef21147c3f550e18435baa1/api/set/info", {
+                    page: 1,
+                    name: "Tina"
+                },
+                function (data, status) {
+                    console.log(data);
+                    console.log(status);
+                });
+
+        })
+    </script>
+</body>
+
+</html>
